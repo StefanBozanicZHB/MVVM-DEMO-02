@@ -10,7 +10,7 @@ import com.example.mvvdemo02.data.model.artist.Artist
 interface ArtistDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun saveArtists(artists: List<Artist>): Int
+    suspend fun saveArtists(artists: List<Artist>)
 
     @Query("DELETE FROM popular_artist")
     suspend fun deleteAllArtists(): Int

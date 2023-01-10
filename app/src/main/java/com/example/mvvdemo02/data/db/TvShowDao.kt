@@ -9,7 +9,7 @@ import com.example.mvvdemo02.data.model.tvshow.TvShow
 interface TvShowDao {
 
     @Insert
-    suspend fun saveTvShows(tvShows: List<TvShow>): Int
+    suspend fun saveTvShows(tvShows: List<TvShow>)
 
     @Query("DELETE FROM popular_tv_show")
     suspend fun deleteAllTvShows(): Int

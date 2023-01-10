@@ -10,7 +10,7 @@ import com.example.mvvdemo02.data.model.movie.Movie
 interface MovieDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun saveMovies(movies: List<Movie>): Int
+    suspend fun saveMovies(movies: List<Movie>)
 
     @Query("DELETE FROM popular_movie")
     suspend fun deleteAllMovies(): Int
