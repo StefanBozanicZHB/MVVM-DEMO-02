@@ -12,7 +12,7 @@ import com.example.mvvdemo02.data.model.tvshow.TvShow
     exportSchema = false,
 )
 abstract class TMDBDatabase : RoomDatabase() {
-    abstract val movieDao: MovieDao
-    abstract val tvShowDao: TvShowDao
-    abstract val artistDao: ArtistDao
+    abstract fun movieDao(): MovieDao
+    abstract fun tvShowDao(): TvShowDao
+    abstract fun artistDao(): ArtistDao
 }

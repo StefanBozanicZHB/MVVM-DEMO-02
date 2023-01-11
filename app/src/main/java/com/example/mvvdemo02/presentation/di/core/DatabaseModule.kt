@@ -26,18 +26,18 @@ class DatabaseModule {
     @Singleton
     @Provides
     fun provideMovieDao(tmdbDatabase: TMDBDatabase): MovieDao {
-        return tmdbDatabase.movieDao
+        return tmdbDatabase.movieDao()
     }
 
     @Singleton
     @Provides
     fun provideArtistDao(tmdbDatabase: TMDBDatabase): ArtistDao {
-        return tmdbDatabase.artistDao
+        return tmdbDatabase.artistDao()
     }
 
     @Singleton
     @Provides
     fun provideTvShowDao(tmdbDatabase: TMDBDatabase): TvShowDao {
-        return tmdbDatabase.tvShowDao
+        return tmdbDatabase.tvShowDao()
     }
 }
